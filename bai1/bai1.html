@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //cho người dùng nhập vào một chuỗi là 5 chữ số nguyên, tìm số lớn nhất và duy nhất trong 5 số đó
+        //Input: Một chuỗi số nguyên có 5 chữ số
+        //Output: Số lớn nhất và cũng là số duy nhất 
+
+
+
+    
+        let input = prompt("Nhập vào một chuỗi 5 chữ số nguyên");
+        // Gọi hàm
+        let result = searchElement(input);
+        console.log(result);
+
+        function searchElement(input) {      
+            let change = input.split("").map(Number);          
+            let saveElement = -1;         
+            for (let digit of change) {
+             
+                if (change.indexOf(digit) === change.lastIndexOf(digit)) {
+                                      if (digit > saveElement) {
+                                              saveElement = digit;
+                    }
+                }
+            }
+            // In ra kết quả
+            console.log("Chữ số lớn nhất và duy nhất trong chuỗi là: " + `${saveElement}`);     
+            return saveElement;
+        }
+
+    </script>
+
+
+</body>
+
+</html>

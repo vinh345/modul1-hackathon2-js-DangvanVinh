@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Viết chương trình JS nhập vào một chuỗi ký tự, xóa ký tự số trong đó
+
+
+        let input = prompt("Nhập vào một chuỗi ký tự");
+
+        let result = deleteCharacters(input);
+        console.log(result)
+        
+        function deleteCharacters(input) {
+            let output = "";
+            for (let char of input) {
+                if (isNaN(char)) {
+                    output += char;
+                }
+            }
+            console.log("chuỗi kí tự còn lại là: " + `${output}`);
+        }
+    </script>
+
+</body>
+
+</html>
